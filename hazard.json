@@ -1,0 +1,38 @@
+{
+  "format": "avsim-studio/1",
+  "params": {
+    "cutT0": 6.5,
+    "cutDur": 2.4,
+    "cutV": 15.0,
+    "pedT0": 11.0,
+    "pedV": 1.45,
+    "busGo": 17.0,
+    "cutDs": -4.0,
+    "tgT": 0.9,
+    "mu": 0.8,
+    "cutGap": 12.0,
+    "cutBrake": 0.0,
+    "pedGap": 4.5,
+    "pedLook": 1.0,
+    "civil": 1.0
+  },
+  "policy": {},
+  "hazards": [
+    {
+      "type": "ped",
+      "x": 120.0,
+      "side": "S",
+      "v": 3.0,
+      "t0": 0.0,
+      "trig": 20.0
+    }
+  ],
+  "ego": "planner",
+  "space": {
+    "h0_x": [115.0, 125.0],
+    "h0_v": [2.8, 3.2],
+    "h0_trig": [15.0, 25.0]
+  },
+  "exposure": 0.2,
+  "why": "Rắc rối là người chạy băng ngang giữa phố, không có vạch qua đường. Trong nghiên cứu video ở Johari Bazar, Jaipur, nhóm nghiên cứu ghi nhận trung bình 510 lượt người đi bộ băng ngang mỗi giờ khi lưu lượng là 600–2400 PCU/giờ; lấy tỷ số tại lưu lượng cao nhất 510/2400=0.2125, làm tròn xuống exposure=0.2 lượt/xe qua đoạn đường làm proxy mỗi chuyến. Đây là proxy từ một đoạn thương mại ở Jaipur, không phải tần suất của town C; cần thay bằng đếm đồng bộ người đi bộ và xe tại đoạn đường thực. Khoảng tốc độ [2.8,3.2] m/s tập trung vào nhóm băng nhanh/chạy; nghiên cứu video ở các điểm băng ngang không kiểm soát ghi nhận tốc độ trung bình 2.48±1.17 và 1.82±1.05 m/s tại hai vị trí, đồng thời các nghiên cứu hành vi midblock ghi nhận hành vi chạy. Khoảng x [115,125] m và kích hoạt [15,25] m là cửa sổ bố trí/độ trễ khảo sát quanh cảnh va chạm trong hệ tọa độ mô phỏng; cần thay bằng tọa độ và khoảng cách kích hoạt lấy từ trajectory/video tại địa điểm triển khai. Nguồn: https://nirmawebsite.s3.ap-south-1.amazonaws.com/wp-content/uploads/sites/22/2024/04/1-s2.0-S2590198221000026-main.pdf ; https://www.sciencedirect.com/science/article/pii/S2352146520304865 ; https://www.sciencedirect.com/science/article/pii/S0022437519306280"
+}
